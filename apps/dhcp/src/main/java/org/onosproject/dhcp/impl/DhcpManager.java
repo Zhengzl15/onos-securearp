@@ -66,6 +66,8 @@ import org.onosproject.net.packet.PacketService;
 import org.onosproject.net.provider.AbstractProvider;
 import org.onosproject.net.provider.ProviderId;
 
+//import org.onosproject.securearp.SecureArpService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -447,7 +449,7 @@ public class DhcpManager implements DhcpService {
                     outgoingPacketType = DHCPPacketType.DHCPOFFER;
                     //Ip4Address ipOffered = dhcpStore.suggestIP(hostId, requestedIP);
                     Ip4Address ipOffered = Ip4Address.valueOf(freeIp + allocatedNum);
-                    //arpService.setIpMacTable(IpAddress.valueOf(ipOffered.toInt()), mac);
+                    //arpService.setIpMacTable(IpAddress.valueOf(ipOffered.toInt()), clientMAC);
                     allocatedNum++;
                     if (ipOffered != null) {
                     	System.out.println("Not null");

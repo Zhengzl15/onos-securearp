@@ -76,6 +76,6 @@ public interface DhcpService {
      *
      * @return list of available IPs
      */
-    Iterable<Ip4Address> getAvailableIPs();
+    Iterable<Ip4Address> getAvailableIPs();	
 
 }
