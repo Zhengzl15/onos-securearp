@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.app.impl.ApplicationManager" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.app.impl.ApplicationManager"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.app.ApplicationService"/>
+            <provide interface="org.onosproject.event.ListenerService"/>
+            <provide interface="org.onosproject.app.ApplicationAdminService"/>
+        </service>
+        <property name="service.pid" value="org.onosproject.app.impl.ApplicationManager"/>
+        <reference name="store" interface="org.onosproject.app.ApplicationStore" cardinality="1..1" policy="static" bind="bindStore" unbind="unbindStore"/>
+        <reference name="featuresService" interface="org.apache.karaf.features.FeaturesService" cardinality="1..1" policy="static" bind="bindFeaturesService" unbind="unbindFeaturesService"/>
+        <reference name="eventDispatcher" interface="org.onosproject.event.EventDeliveryService" cardinality="1..1" policy="static" bind="bindEventDispatcher" unbind="unbindEventDispatcher"/>
+    </scr:component>
+</components>

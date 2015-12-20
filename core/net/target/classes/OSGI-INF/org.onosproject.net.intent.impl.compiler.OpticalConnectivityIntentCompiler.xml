@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.net.intent.impl.compiler.OpticalConnectivityIntentCompiler" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.net.intent.impl.compiler.OpticalConnectivityIntentCompiler"/>
+        <property name="service.pid" value="org.onosproject.net.intent.impl.compiler.OpticalConnectivityIntentCompiler"/>
+        <reference name="intentManager" interface="org.onosproject.net.intent.IntentExtensionService" cardinality="1..1" policy="static" bind="bindIntentManager" unbind="unbindIntentManager"/>
+        <reference name="topologyService" interface="org.onosproject.net.topology.TopologyService" cardinality="1..1" policy="static" bind="bindTopologyService" unbind="unbindTopologyService"/>
+        <reference name="deviceService" interface="org.onosproject.net.device.DeviceService" cardinality="1..1" policy="static" bind="bindDeviceService" unbind="unbindDeviceService"/>
+        <reference name="linkResourceService" interface="org.onosproject.net.resource.link.LinkResourceService" cardinality="1..1" policy="static" bind="bindLinkResourceService" unbind="unbindLinkResourceService"/>
+        <reference name="deviceResourceService" interface="org.onosproject.net.resource.device.DeviceResourceService" cardinality="1..1" policy="static" bind="bindDeviceResourceService" unbind="unbindDeviceResourceService"/>
+    </scr:component>
+</components>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.routing.config.impl.RoutingConfigurationImpl" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.routing.config.impl.RoutingConfigurationImpl"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.routing.config.RoutingConfigurationService"/>
+        </service>
+        <property name="service.pid" value="org.onosproject.routing.config.impl.RoutingConfigurationImpl"/>
+        <reference name="hostService" interface="org.onosproject.net.host.HostService" cardinality="1..1" policy="static" bind="bindHostService" unbind="unbindHostService"/>
+        <reference name="registry" interface="org.onosproject.net.config.NetworkConfigRegistry" cardinality="1..1" policy="static" bind="bindRegistry" unbind="unbindRegistry"/>
+        <reference name="configService" interface="org.onosproject.net.config.NetworkConfigService" cardinality="1..1" policy="static" bind="bindConfigService" unbind="unbindConfigService"/>
+        <reference name="coreService" interface="org.onosproject.core.CoreService" cardinality="1..1" policy="static" bind="bindCoreService" unbind="unbindCoreService"/>
+        <reference name="interfaceService" interface="org.onosproject.incubator.net.intf.InterfaceService" cardinality="1..1" policy="static" bind="bindInterfaceService" unbind="unbindInterfaceService"/>
+    </scr:component>
+</components>

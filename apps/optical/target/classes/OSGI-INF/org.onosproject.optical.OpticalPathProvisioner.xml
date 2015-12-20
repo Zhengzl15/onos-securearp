@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.optical.OpticalPathProvisioner" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.optical.OpticalPathProvisioner"/>
+        <property name="service.pid" value="org.onosproject.optical.OpticalPathProvisioner"/>
+        <reference name="intentService" interface="org.onosproject.net.intent.IntentService" cardinality="1..1" policy="static" bind="bindIntentService" unbind="unbindIntentService"/>
+        <reference name="pathService" interface="org.onosproject.net.topology.PathService" cardinality="1..1" policy="static" bind="bindPathService" unbind="unbindPathService"/>
+        <reference name="coreService" interface="org.onosproject.core.CoreService" cardinality="1..1" policy="static" bind="bindCoreService" unbind="unbindCoreService"/>
+        <reference name="hostService" interface="org.onosproject.net.host.HostService" cardinality="1..1" policy="static" bind="bindHostService" unbind="unbindHostService"/>
+        <reference name="mastershipService" interface="org.onosproject.mastership.MastershipService" cardinality="1..1" policy="static" bind="bindMastershipService" unbind="unbindMastershipService"/>
+        <reference name="clusterService" interface="org.onosproject.cluster.ClusterService" cardinality="1..1" policy="static" bind="bindClusterService" unbind="unbindClusterService"/>
+        <reference name="deviceService" interface="org.onosproject.net.device.DeviceService" cardinality="1..1" policy="static" bind="bindDeviceService" unbind="unbindDeviceService"/>
+        <reference name="deviceResourceService" interface="org.onosproject.net.resource.device.DeviceResourceService" cardinality="1..1" policy="static" bind="bindDeviceResourceService" unbind="unbindDeviceResourceService"/>
+        <reference name="linkResourceService" interface="org.onosproject.net.resource.link.LinkResourceService" cardinality="1..1" policy="static" bind="bindLinkResourceService" unbind="unbindLinkResourceService"/>
+    </scr:component>
+</components>

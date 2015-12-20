@@ -1,0 +1,32 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1450617385098
+Build-Jdk: 1.8.0_65
+Built-By: zzl
+Bundle-Description: ONOS information providers and control/management pr
+ otocol adapter
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: onos-ovsdb-provider-device
+Bundle-SymbolicName: org.onosproject.onos-ovsdb-provider-device
+Bundle-Version: 1.3.0
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.onosproject.ovsdb.providers.device;uses:="org.onospr
+ oject.net,org.onosproject.net.device,org.onosproject.net.provider,org.o
+ nosproject.ovsdb.controller";version="1.3.0"
+Import-Package: com.google.common.base;version="[18.0,19)",org.onlab.pac
+ ket;version="[1.3,2)",org.onosproject.net;version="[1.3,2)",org.onospro
+ ject.net.device;version="[1.3,2)",org.onosproject.net.provider;version=
+ "[1.3,2)",org.onosproject.ovsdb.controller;version="[1.3,2)",org.slf4j;
+ version="[1.7,2)"
+Provide-Capability: osgi.service;effective:=active;objectClass:List<Stri
+ ng>="org.onosproject.net.device.DeviceProvider,org.onosproject.net.prov
+ ider.Provider"
+Require-Capability: osgi.service;effective:=active;filter:="(objectClass
+ =org.onosproject.net.device.DeviceProviderRegistry)",osgi.service;effec
+ tive:=active;filter:="(objectClass=org.onosproject.net.device.DeviceSer
+ vice)",osgi.service;effective:=active;filter:="(objectClass=org.onospro
+ ject.ovsdb.controller.OvsdbController)",osgi.ee;filter:="(&(osgi.ee=Jav
+ aSE)(version=1.8))"
+Service-Component: OSGI-INF/org.onosproject.ovsdb.providers.device.Ovsdb
+ DeviceProvider.xml
+Tool: Bnd-2.4.0.201411031534

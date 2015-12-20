@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component enabled="false" immediate="true" name="org.onosproject.net.newresource.impl.ResourceManager">
+        <implementation class="org.onosproject.net.newresource.impl.ResourceManager"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.net.newresource.ResourceService"/>
+            <provide interface="org.onosproject.net.newresource.ResourceAdminService"/>
+        </service>
+        <property name="service.pid" value="org.onosproject.net.newresource.impl.ResourceManager"/>
+        <reference name="store" interface="org.onosproject.net.newresource.ResourceStore" cardinality="1..1" policy="static" bind="bindStore" unbind="unbindStore"/>
+    </scr:component>
+</components>

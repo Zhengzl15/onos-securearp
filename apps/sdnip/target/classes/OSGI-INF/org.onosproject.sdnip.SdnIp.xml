@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.sdnip.SdnIp" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.sdnip.SdnIp"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.sdnip.SdnIpService"/>
+        </service>
+        <property name="service.pid" value="org.onosproject.sdnip.SdnIp"/>
+        <reference name="coreService" interface="org.onosproject.core.CoreService" cardinality="1..1" policy="static" bind="bindCoreService" unbind="unbindCoreService"/>
+        <reference name="intentService" interface="org.onosproject.net.intent.IntentService" cardinality="1..1" policy="static" bind="bindIntentService" unbind="unbindIntentService"/>
+        <reference name="hostService" interface="org.onosproject.net.host.HostService" cardinality="1..1" policy="static" bind="bindHostService" unbind="unbindHostService"/>
+        <reference name="clusterService" interface="org.onosproject.cluster.ClusterService" cardinality="1..1" policy="static" bind="bindClusterService" unbind="unbindClusterService"/>
+        <reference name="leadershipService" interface="org.onosproject.cluster.LeadershipService" cardinality="1..1" policy="static" bind="bindLeadershipService" unbind="unbindLeadershipService"/>
+        <reference name="routingService" interface="org.onosproject.routing.RoutingService" cardinality="1..1" policy="static" bind="bindRoutingService" unbind="unbindRoutingService"/>
+        <reference name="config" interface="org.onosproject.routing.config.RoutingConfigurationService" cardinality="1..1" policy="static" bind="bindConfig" unbind="unbindConfig"/>
+        <reference name="networkConfigService" interface="org.onosproject.net.config.NetworkConfigService" cardinality="1..1" policy="static" bind="bindNetworkConfigService" unbind="unbindNetworkConfigService"/>
+        <reference name="interfaceService" interface="org.onosproject.incubator.net.intf.InterfaceService" cardinality="1..1" policy="static" bind="bindInterfaceService" unbind="unbindInterfaceService"/>
+    </scr:component>
+</components>

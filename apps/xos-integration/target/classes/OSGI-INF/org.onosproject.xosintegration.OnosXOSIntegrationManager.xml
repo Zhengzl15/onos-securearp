@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.xosintegration.OnosXOSIntegrationManager" activate="activate" deactivate="deactivate" modified="modified">
+        <implementation class="org.onosproject.xosintegration.OnosXOSIntegrationManager"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.xosintegration.VoltTenantService"/>
+        </service>
+        <property name="xosServerAddress" value="10.254.1.22"/>
+        <property name="xosServerPort" type="Integer" value="8000"/>
+        <property name="xosProviderService" type="Integer" value="1"/>
+        <property name="service.pid" value="org.onosproject.xosintegration.OnosXOSIntegrationManager"/>
+        <reference name="coreService" interface="org.onosproject.core.CoreService" cardinality="1..1" policy="static" bind="bindCoreService" unbind="unbindCoreService"/>
+        <reference name="cfgService" interface="org.onosproject.cfg.ComponentConfigService" cardinality="1..1" policy="static" bind="bindCfgService" unbind="unbindCfgService"/>
+        <reference name="flowObjectiveService" interface="org.onosproject.net.flowobjective.FlowObjectiveService" cardinality="1..1" policy="static" bind="bindFlowObjectiveService" unbind="unbindFlowObjectiveService"/>
+    </scr:component>
+</components>

@@ -1,0 +1,34 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1450617383675
+Build-Jdk: 1.8.0_65
+Built-By: zzl
+Bundle-Description: PCEP topology provider
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: onos-pcep-provider-topology
+Bundle-SymbolicName: org.onosproject.onos-pcep-provider-topology
+Bundle-Version: 1.3.0
+Created-By: Apache Maven Bundle Plugin
+Import-Package: com.google.common.base;version="[18.0,19)",org.onlab.pac
+ ket;version="[1.3,2)",org.onlab.util;version="[1.3,2)",org.onosproject.
+ cluster;version="[1.3,2)",org.onosproject.mastership;version="[1.3,2)",
+ org.onosproject.net;version="[1.3,2)",org.onosproject.net.device;versio
+ n="[1.3,2)",org.onosproject.net.link;version="[1.3,2)",org.onosproject.
+ net.provider;version="[1.3,2)",org.onosproject.pcep.api;version="[1.3,2
+ )",org.slf4j;version="[1.7,2)"
+Require-Capability: osgi.service;effective:=active;filter:="(objectClass
+ =org.onosproject.mastership.MastershipAdminService)",osgi.service;effec
+ tive:=active;filter:="(objectClass=org.onosproject.cluster.ClusterServi
+ ce)",osgi.service;effective:=active;filter:="(objectClass=org.onosproje
+ ct.net.link.LinkProviderRegistry)",osgi.service;effective:=active;filte
+ r:="(objectClass=org.onosproject.net.device.DeviceProviderRegistry)",os
+ gi.service;effective:=active;filter:="(objectClass=org.onosproject.pcep
+ .api.PcepController)",osgi.service;effective:=active;filter:="(objectCl
+ ass=org.onosproject.net.device.DeviceService)",osgi.service;effective:=
+ active;filter:="(objectClass=org.onosproject.net.link.LinkService)",osg
+ i.service;effective:=active;filter:="(objectClass=org.onosproject.maste
+ rship.MastershipService)",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1
+ .8))"
+Service-Component: OSGI-INF/org.onosproject.provider.pcep.topology.impl.
+ PcepTopologyProvider.xml
+Tool: Bnd-2.4.0.201411031534

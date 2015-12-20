@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1450617375263
+Build-Jdk: 1.8.0_65
+Built-By: zzl
+Bundle-Description: ONOS Pcepio Protocol subsystem
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: onos-pcepio
+Bundle-SymbolicName: org.onosproject.onos-pcepio
+Bundle-Version: 1.3.0
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.onosproject.pcepio.types;uses:="org.jboss.netty.buff
+ er,org.onosproject.pcepio.exceptions,org.onosproject.pcepio.protocol,or
+ g.slf4j";version="1.3.0",org.onosproject.pcepio.exceptions;version="1.3
+ .0",org.onosproject.pcepio.protocol;uses:="org.jboss.netty.buffer,org.o
+ nosproject.pcepio.exceptions,org.onosproject.pcepio.types,org.slf4j";ve
+ rsion="1.3.0",org.onosproject.pcepio.protocol.ver1;uses:="org.jboss.net
+ ty.buffer,org.onosproject.pcepio.exceptions,org.onosproject.pcepio.prot
+ ocol,org.onosproject.pcepio.types,org.slf4j";version="1.3.0",org.onospr
+ oject.pcepio.util;uses:="org.jboss.netty.buffer,org.slf4j";version="1.3
+ .0"
+Import-Package: com.google.common.base;version="[18.0,19)",org.jboss.net
+ ty.buffer;version="[3.9,4)",org.slf4j;version="[1.7,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-2.4.0.201411031534

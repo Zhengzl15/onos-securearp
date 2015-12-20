@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1450617376416
+Build-Jdk: 1.8.0_65
+Built-By: zzl
+Bundle-Description: ONOS PCEP client controller subsystem API implementa
+ tion
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: onos-pcep-controller-impl
+Bundle-SymbolicName: org.onosproject.onos-pcep-controller-impl
+Bundle-Version: 1.3.0
+Created-By: Apache Maven Bundle Plugin
+Import-Package: com.google.common.base;version="[18.0,19)",com.google.co
+ mmon.collect;version="[18.0,19)",org.jboss.netty.bootstrap;version="[3.
+ 9,4)",org.jboss.netty.buffer;version="[3.9,4)",org.jboss.netty.channel;
+ version="[3.9,4)",org.jboss.netty.channel.group;version="[3.9,4)",org.j
+ boss.netty.channel.socket.nio;version="[3.9,4)",org.jboss.netty.handler
+ .codec.frame;version="[3.9,4)",org.jboss.netty.handler.codec.oneone;ver
+ sion="[3.9,4)",org.jboss.netty.handler.timeout;version="[3.9,4)",org.jb
+ oss.netty.util;version="[3.9,4)",org.onlab.packet,org.onlab.util,org.on
+ osproject.pcep.controller,org.onosproject.pcep.controller.driver;versio
+ n="[1.3,2)",org.onosproject.pcepio.exceptions;version="[1.3,2)",org.ono
+ sproject.pcepio.protocol;version="[1.3,2)",org.onosproject.pcepio.types
+ ;version="[1.3,2)",org.onosproject.pcepio.util;version="[1.3,2)",org.sl
+ f4j;version="[1.7,2)"
+Provide-Capability: osgi.service;effective:=active;objectClass="org.onos
+ project.pcep.controller.PcepClientController"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/org.onosproject.pcep.controller.impl.PcepCli
+ entControllerImpl.xml
+Tool: Bnd-2.4.0.201411031534

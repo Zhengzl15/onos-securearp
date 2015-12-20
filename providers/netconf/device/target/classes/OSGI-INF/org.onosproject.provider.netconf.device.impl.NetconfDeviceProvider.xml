@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.provider.netconf.device.impl.NetconfDeviceProvider" activate="activate" deactivate="deactivate" modified="modified">
+        <implementation class="org.onosproject.provider.netconf.device.impl.NetconfDeviceProvider"/>
+        <property name="devConfigs" value=""/>
+        <property name="devPasswords" value=""/>
+        <property name="service.pid" value="org.onosproject.provider.netconf.device.impl.NetconfDeviceProvider"/>
+        <reference name="providerRegistry" interface="org.onosproject.net.device.DeviceProviderRegistry" cardinality="1..1" policy="static" bind="bindProviderRegistry" unbind="unbindProviderRegistry"/>
+        <reference name="deviceService" interface="org.onosproject.net.device.DeviceService" cardinality="1..1" policy="static" bind="bindDeviceService" unbind="unbindDeviceService"/>
+        <reference name="clusterService" interface="org.onosproject.cluster.ClusterService" cardinality="1..1" policy="static" bind="bindClusterService" unbind="unbindClusterService"/>
+        <reference name="cfgService" interface="org.onosproject.cfg.ComponentConfigService" cardinality="1..1" policy="static" bind="bindCfgService" unbind="unbindCfgService"/>
+    </scr:component>
+</components>

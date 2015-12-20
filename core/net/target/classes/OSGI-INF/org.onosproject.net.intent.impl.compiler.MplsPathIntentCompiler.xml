@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.net.intent.impl.compiler.MplsPathIntentCompiler" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.net.intent.impl.compiler.MplsPathIntentCompiler"/>
+        <property name="service.pid" value="org.onosproject.net.intent.impl.compiler.MplsPathIntentCompiler"/>
+        <reference name="intentExtensionService" interface="org.onosproject.net.intent.IntentExtensionService" cardinality="1..1" policy="static" bind="bindIntentExtensionService" unbind="unbindIntentExtensionService"/>
+        <reference name="coreService" interface="org.onosproject.core.CoreService" cardinality="1..1" policy="static" bind="bindCoreService" unbind="unbindCoreService"/>
+        <reference name="resourceService" interface="org.onosproject.net.resource.link.LinkResourceService" cardinality="1..1" policy="static" bind="bindResourceService" unbind="unbindResourceService"/>
+        <reference name="linkStore" interface="org.onosproject.net.link.LinkStore" cardinality="1..1" policy="static" bind="bindLinkStore" unbind="unbindLinkStore"/>
+    </scr:component>
+</components>

@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1450617377862
+Build-Jdk: 1.8.0_65
+Built-By: zzl
+Bundle-Description: ONOS OpenFlow protocol group provider
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: onos-of-provider-group
+Bundle-SymbolicName: org.onosproject.onos-of-provider-group
+Bundle-Version: 1.3.0
+Created-By: Apache Maven Bundle Plugin
+Import-Package: com.google.common.collect;version="[18.0,19)",org.jboss.
+ netty.util;version="[3.9,4)",org.onlab.packet,org.onlab.util,org.onospr
+ oject.core,org.onosproject.net,org.onosproject.net.flow,org.onosproject
+ .net.flow.instructions,org.onosproject.net.group,org.onosproject.net.pr
+ ovider,org.onosproject.openflow.controller;version="[1.3,2)",org.projec
+ tfloodlight.openflow.protocol;version="[1.3,2)",org.projectfloodlight.o
+ penflow.protocol.action;version="[1.3,2)",org.projectfloodlight.openflo
+ w.protocol.match;version="[1.3,2)",org.projectfloodlight.openflow.proto
+ col.oxm;version="[1.3,2)",org.projectfloodlight.openflow.types;version=
+ "[1.3,2)",org.slf4j
+Require-Capability: osgi.service;effective:=active;filter:="(objectClass
+ =org.onosproject.openflow.controller.OpenFlowController)",osgi.service;
+ effective:=active;filter:="(objectClass=org.onosproject.net.group.Group
+ ProviderRegistry)",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/org.onosproject.provider.of.group.impl.OpenF
+ lowGroupProvider.xml
+Tool: Bnd-2.4.0.201411031534

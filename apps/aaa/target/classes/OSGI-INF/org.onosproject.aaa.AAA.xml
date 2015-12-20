@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.aaa.AAA" activate="activate" deactivate="deactivate" modified="modified">
+        <implementation class="org.onosproject.aaa.AAA"/>
+        <property name="radiusIpAddress" value="192.168.1.10"/>
+        <property name="nasIpAddress" value="192.168.1.11"/>
+        <property name="radiusMacAddress" value="00:00:00:00:01:10"/>
+        <property name="nasMacAddress" value="00:00:00:00:10:01"/>
+        <property name="radiusSecret" value="ONOSecret"/>
+        <property name="radiusSwitchId" value="of:90e2ba82f97791e9"/>
+        <property name="radiusPortNumber" value="129"/>
+        <property name="service.pid" value="org.onosproject.aaa.AAA"/>
+        <reference name="coreService" interface="org.onosproject.core.CoreService" cardinality="1..1" policy="static" bind="bindCoreService" unbind="unbindCoreService"/>
+        <reference name="packetService" interface="org.onosproject.net.packet.PacketService" cardinality="1..1" policy="static" bind="bindPacketService" unbind="unbindPacketService"/>
+        <reference name="hostService" interface="org.onosproject.net.host.HostService" cardinality="1..1" policy="static" bind="bindHostService" unbind="unbindHostService"/>
+        <reference name="voltTenantService" interface="org.onosproject.xosintegration.VoltTenantService" cardinality="1..1" policy="static" bind="bindVoltTenantService" unbind="unbindVoltTenantService"/>
+        <reference name="cfgService" interface="org.onosproject.cfg.ComponentConfigService" cardinality="1..1" policy="static" bind="bindCfgService" unbind="unbindCfgService"/>
+    </scr:component>
+</components>

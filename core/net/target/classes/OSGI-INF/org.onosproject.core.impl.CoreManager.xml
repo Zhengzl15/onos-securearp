@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.core.impl.CoreManager" activate="activate" deactivate="deactivate" modified="modified">
+        <implementation class="org.onosproject.core.impl.CoreManager"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.core.CoreService"/>
+        </service>
+        <property name="sharedThreadPoolSize" type="Integer" value="30"/>
+        <property name="maxEventTimeLimit" type="Integer" value="2000"/>
+        <property name="service.pid" value="org.onosproject.core.impl.CoreManager"/>
+        <reference name="applicationIdStore" interface="org.onosproject.core.ApplicationIdStore" cardinality="1..1" policy="static" bind="bindApplicationIdStore" unbind="unbindApplicationIdStore"/>
+        <reference name="idBlockStore" interface="org.onosproject.core.IdBlockStore" cardinality="1..1" policy="static" bind="bindIdBlockStore" unbind="unbindIdBlockStore"/>
+        <reference name="cfgService" interface="org.onosproject.cfg.ComponentConfigService" cardinality="1..1" policy="static" bind="bindCfgService" unbind="unbindCfgService"/>
+        <reference name="eventDeliveryService" interface="org.onosproject.event.EventDeliveryService" cardinality="1..1" policy="static" bind="bindEventDeliveryService" unbind="unbindEventDeliveryService"/>
+    </scr:component>
+</components>

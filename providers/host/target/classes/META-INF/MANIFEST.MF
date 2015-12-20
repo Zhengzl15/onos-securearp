@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1450617379336
+Build-Jdk: 1.8.0_65
+Built-By: zzl
+Bundle-Description: ONOS host tracking provider
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: onos-host-provider
+Bundle-SymbolicName: org.onosproject.onos-host-provider
+Bundle-Version: 1.3.0
+Created-By: Apache Maven Bundle Plugin
+Import-Package: com.google.common.base;version="[18.0,19)",org.onlab.pac
+ ket;version="[1.3,2)",org.onlab.packet.ipv6;version="[1.3,2)",org.onlab
+ .packet.ndp;version="[1.3,2)",org.onosproject.cfg;version="[1.3,2)",org
+ .onosproject.core;version="[1.3,2)",org.onosproject.event;version="[1.3
+ ,2)",org.onosproject.net;version="[1.3,2)",org.onosproject.net.device;v
+ ersion="[1.3,2)",org.onosproject.net.flow;version="[1.3,2)",org.onospro
+ ject.net.host;version="[1.3,2)",org.onosproject.net.packet;version="[1.
+ 3,2)",org.onosproject.net.provider;version="[1.3,2)",org.onosproject.ne
+ t.topology;version="[1.3,2)",org.osgi.service.component;version="[1.2,2
+ )",org.slf4j;version="[1.7,2)"
+Require-Capability: osgi.service;effective:=active;filter:="(objectClass
+ =org.onosproject.net.packet.PacketService)",osgi.service;effective:=act
+ ive;filter:="(objectClass=org.onosproject.cfg.ComponentConfigService)",
+ osgi.service;effective:=active;filter:="(objectClass=org.onosproject.ne
+ t.host.HostService)",osgi.service;effective:=active;filter:="(objectCla
+ ss=org.onosproject.net.device.DeviceService)",osgi.service;effective:=a
+ ctive;filter:="(objectClass=org.onosproject.net.host.HostProviderRegist
+ ry)",osgi.service;effective:=active;filter:="(objectClass=org.onosproje
+ ct.net.topology.TopologyService)",osgi.service;effective:=active;filter
+ :="(objectClass=org.onosproject.core.CoreService)",osgi.ee;filter:="(&(
+ osgi.ee=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/org.onosproject.provider.host.impl.HostLocat
+ ionProvider.xml
+Tool: Bnd-2.4.0.201411031534

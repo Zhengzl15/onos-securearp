@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1450617390621
+Build-Jdk: 1.8.0_65
+Built-By: zzl
+Bundle-Description: OLT application
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: onos-app-olt
+Bundle-SymbolicName: org.onosproject.onos-app-olt
+Bundle-Version: 1.3.0
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.onosproject.olt;uses:="org.onosproject.core,org.onos
+ project.net.device,org.onosproject.net.flowobjective,org.osgi.service.c
+ omponent";version="1.3.0"
+Import-Package: com.google.common.base;version="[18.0,19)",org.onlab.pac
+ ket;version="[1.3,2)",org.onlab.util;version="[1.3,2)",org.onosproject.
+ core;version="[1.3,2)",org.onosproject.event;version="[1.3,2)",org.onos
+ project.net;version="[1.3,2)",org.onosproject.net.device;version="[1.3,
+ 2)",org.onosproject.net.flow;version="[1.3,2)",org.onosproject.net.flow
+ objective;version="[1.3,2)",org.osgi.service.component;version="[1.2,2)
+ ",org.slf4j;version="[1.7,2)"
+Require-Capability: osgi.service;effective:=active;filter:="(objectClass
+ =org.onosproject.net.device.DeviceService)",osgi.service;effective:=act
+ ive;filter:="(objectClass=org.onosproject.core.CoreService)",osgi.servi
+ ce;effective:=active;filter:="(objectClass=org.onosproject.net.flowobje
+ ctive.FlowObjectiveService)",osgi.ee;filter:="(&(osgi.ee=JavaSE)(versio
+ n=1.8))"
+Service-Component: OSGI-INF/org.onosproject.olt.OLT.xml
+Tool: Bnd-2.4.0.201411031534

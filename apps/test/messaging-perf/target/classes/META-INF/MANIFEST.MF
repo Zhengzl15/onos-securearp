@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1450617389239
+Build-Jdk: 1.8.0_65
+Built-By: zzl
+Bundle-Description: Messaging performance test application
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: onos-app-messaging-perf
+Bundle-SymbolicName: org.onosproject.onos-app-messaging-perf
+Bundle-Version: 1.3.0
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.onosproject.messagingperf;uses:="org.onosproject.cfg
+ ,org.onosproject.cluster,org.onosproject.core,org.onosproject.store.clu
+ ster.messaging,org.onosproject.store.serializers,org.osgi.service.compo
+ nent";version="1.3.0"
+Import-Package: com.google.common.base;version="[18.0,19)",com.google.co
+ mmon.collect;version="[18.0,19)",com.google.common.util.concurrent;vers
+ ion="[18.0,19)",org.onlab.util;version="[1.3,2)",org.onosproject.cfg;ve
+ rsion="[1.3,2)",org.onosproject.cluster;version="[1.3,2)",org.onosproje
+ ct.core;version="[1.3,2)",org.onosproject.store.cluster.messaging;versi
+ on="[1.3,2)",org.onosproject.store.serializers;version="[1.3,2)",org.os
+ gi.service.component;version="[1.2,2)",org.slf4j;version="[1.7,2)"
+Provide-Capability: osgi.service;effective:=active;objectClass="org.onos
+ project.messagingperf.MessagingPerfApp";totalSenderThreads=2;totalRecei
+ verThreads=2;serializationOn=true;receiveOnIOLoopThread=false
+Require-Capability: osgi.service;effective:=active;filter:="(objectClass
+ =org.onosproject.cluster.ClusterService)",osgi.service;effective:=activ
+ e;filter:="(objectClass=org.onosproject.cfg.ComponentConfigService)",os
+ gi.service;effective:=active;filter:="(objectClass=org.onosproject.core
+ .CoreService)",osgi.service;effective:=active;filter:="(objectClass=org
+ .onosproject.store.cluster.messaging.ClusterCommunicationService)",osgi
+ .ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/org.onosproject.messagingperf.MessagingPerfA
+ pp.xml
+Tool: Bnd-2.4.0.201411031534

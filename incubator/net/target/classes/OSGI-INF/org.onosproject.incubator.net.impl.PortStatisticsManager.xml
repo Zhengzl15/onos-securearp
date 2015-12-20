@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.incubator.net.impl.PortStatisticsManager" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.incubator.net.impl.PortStatisticsManager"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.incubator.net.PortStatisticsService"/>
+        </service>
+        <property name="service.pid" value="org.onosproject.incubator.net.impl.PortStatisticsManager"/>
+        <reference name="deviceService" interface="org.onosproject.net.device.DeviceService" cardinality="1..1" policy="static" bind="bindDeviceService" unbind="unbindDeviceService"/>
+    </scr:component>
+</components>

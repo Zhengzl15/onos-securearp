@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.vtnrsc.virtualport.impl.VirtualPortManager" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.vtnrsc.virtualport.impl.VirtualPortManager"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.vtnrsc.virtualport.VirtualPortService"/>
+        </service>
+        <property name="service.pid" value="org.onosproject.vtnrsc.virtualport.impl.VirtualPortManager"/>
+        <reference name="storageService" interface="org.onosproject.store.service.StorageService" cardinality="1..1" policy="static" bind="bindStorageService" unbind="unbindStorageService"/>
+        <reference name="networkService" interface="org.onosproject.vtnrsc.tenantnetwork.TenantNetworkService" cardinality="1..1" policy="static" bind="bindNetworkService" unbind="unbindNetworkService"/>
+        <reference name="coreService" interface="org.onosproject.core.CoreService" cardinality="1..1" policy="static" bind="bindCoreService" unbind="unbindCoreService"/>
+    </scr:component>
+</components>

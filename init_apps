@@ -1,0 +1,4 @@
+#!/bin/bash
+
+export ONOS_IP=166.111.132.213
+export ONOS_APPS=drivers,openflow,securearp,dhcp

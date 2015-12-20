@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.net.edgeservice.impl.EdgeManager" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.net.edgeservice.impl.EdgeManager"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.net.edge.EdgePortService"/>
+            <provide interface="org.onosproject.event.ListenerService"/>
+        </service>
+        <property name="service.pid" value="org.onosproject.net.edgeservice.impl.EdgeManager"/>
+        <reference name="packetService" interface="org.onosproject.net.packet.PacketService" cardinality="1..1" policy="static" bind="bindPacketService" unbind="unbindPacketService"/>
+        <reference name="deviceService" interface="org.onosproject.net.device.DeviceService" cardinality="1..1" policy="static" bind="bindDeviceService" unbind="unbindDeviceService"/>
+        <reference name="topologyService" interface="org.onosproject.net.topology.TopologyService" cardinality="1..1" policy="static" bind="bindTopologyService" unbind="unbindTopologyService"/>
+        <reference name="eventDispatcher" interface="org.onosproject.event.EventDeliveryService" cardinality="1..1" policy="static" bind="bindEventDispatcher" unbind="unbindEventDispatcher"/>
+    </scr:component>
+</components>

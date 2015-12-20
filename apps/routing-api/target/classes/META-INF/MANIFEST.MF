@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1450617386873
+Build-Jdk: 1.8.0_65
+Built-By: zzl
+Bundle-Description: API for routing applications
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: onos-app-routing-api
+Bundle-SymbolicName: org.onosproject.onos-app-routing-api
+Bundle-Version: 1.3.0
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.onosproject.routing;uses:="org.onlab.packet,org.onos
+ project.net,org.onosproject.routing.config";version="1.3.0",org.onospro
+ ject.routing.config;uses:="com.fasterxml.jackson.annotation,org.onlab.p
+ acket,org.onosproject.core,org.onosproject.net,org.onosproject.net.conf
+ ig,org.onosproject.net.host";version="1.3.0"
+Import-Package: com.fasterxml.jackson.annotation;version="[2.4,3)",com.f
+ asterxml.jackson.databind;version="[2.4,3)",com.fasterxml.jackson.datab
+ ind.node;version="[2.4,3)",com.google.common.base;version="[18.0,19)",c
+ om.google.common.collect;version="[18.0,19)",org.onlab.packet;version="
+ [1.3,2)",org.onosproject.core;version="[1.3,2)",org.onosproject.net;ver
+ sion="[1.3,2)",org.onosproject.net.config;version="[1.3,2)",org.onospro
+ ject.net.host;version="[1.3,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-2.4.0.201411031534

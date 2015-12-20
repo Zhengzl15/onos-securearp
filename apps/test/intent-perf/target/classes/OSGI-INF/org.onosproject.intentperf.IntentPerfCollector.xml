@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.intentperf.IntentPerfCollector" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.intentperf.IntentPerfCollector"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.intentperf.IntentPerfCollector"/>
+        </service>
+        <property name="service.pid" value="org.onosproject.intentperf.IntentPerfCollector"/>
+        <reference name="communicationService" interface="org.onosproject.store.cluster.messaging.ClusterCommunicationService" cardinality="1..1" policy="static" bind="bindCommunicationService" unbind="unbindCommunicationService"/>
+        <reference name="clusterService" interface="org.onosproject.cluster.ClusterService" cardinality="1..1" policy="static" bind="bindClusterService" unbind="unbindClusterService"/>
+        <reference name="ui" interface="org.onosproject.intentperf.IntentPerfUi" cardinality="1..1" policy="static" bind="bindUi" unbind="unbindUi"/>
+    </scr:component>
+</components>

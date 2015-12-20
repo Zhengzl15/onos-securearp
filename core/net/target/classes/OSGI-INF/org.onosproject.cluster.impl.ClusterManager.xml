@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.cluster.impl.ClusterManager" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.cluster.impl.ClusterManager"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.cluster.ClusterService"/>
+            <provide interface="org.onosproject.event.ListenerService"/>
+            <provide interface="org.onosproject.cluster.ClusterAdminService"/>
+        </service>
+        <property name="service.pid" value="org.onosproject.cluster.impl.ClusterManager"/>
+        <reference name="clusterDefinitionService" interface="org.onosproject.cluster.ClusterDefinitionService" cardinality="1..1" policy="static" bind="bindClusterDefinitionService" unbind="unbindClusterDefinitionService"/>
+        <reference name="store" interface="org.onosproject.cluster.ClusterStore" cardinality="1..1" policy="static" bind="bindStore" unbind="unbindStore"/>
+        <reference name="systemService" interface="org.apache.karaf.system.SystemService" cardinality="1..1" policy="static" bind="bindSystemService" unbind="unbindSystemService"/>
+        <reference name="eventDispatcher" interface="org.onosproject.event.EventDeliveryService" cardinality="1..1" policy="static" bind="bindEventDispatcher" unbind="unbindEventDispatcher"/>
+    </scr:component>
+</components>

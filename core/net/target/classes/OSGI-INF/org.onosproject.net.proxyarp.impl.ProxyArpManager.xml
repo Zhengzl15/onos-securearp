@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.net.proxyarp.impl.ProxyArpManager" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.net.proxyarp.impl.ProxyArpManager"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.net.proxyarp.ProxyArpService"/>
+        </service>
+        <property name="service.pid" value="org.onosproject.net.proxyarp.impl.ProxyArpManager"/>
+        <reference name="edgeService" interface="org.onosproject.net.edge.EdgePortService" cardinality="1..1" policy="static" bind="bindEdgeService" unbind="unbindEdgeService"/>
+        <reference name="hostService" interface="org.onosproject.net.host.HostService" cardinality="1..1" policy="static" bind="bindHostService" unbind="unbindHostService"/>
+        <reference name="packetService" interface="org.onosproject.net.packet.PacketService" cardinality="1..1" policy="static" bind="bindPacketService" unbind="unbindPacketService"/>
+        <reference name="linkService" interface="org.onosproject.net.link.LinkService" cardinality="1..1" policy="static" bind="bindLinkService" unbind="unbindLinkService"/>
+        <reference name="deviceService" interface="org.onosproject.net.device.DeviceService" cardinality="1..1" policy="static" bind="bindDeviceService" unbind="unbindDeviceService"/>
+        <reference name="store" interface="org.onosproject.net.proxyarp.ProxyArpStore" cardinality="1..1" policy="static" bind="bindStore" unbind="unbindStore"/>
+        <reference name="interfaceService" interface="org.onosproject.incubator.net.intf.InterfaceService" cardinality="1..1" policy="static" bind="bindInterfaceService" unbind="unbindInterfaceService"/>
+    </scr:component>
+</components>

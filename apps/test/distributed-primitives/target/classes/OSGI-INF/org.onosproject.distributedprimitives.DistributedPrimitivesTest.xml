@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.distributedprimitives.DistributedPrimitivesTest" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.distributedprimitives.DistributedPrimitivesTest"/>
+        <property name="service.pid" value="org.onosproject.distributedprimitives.DistributedPrimitivesTest"/>
+        <reference name="coreService" interface="org.onosproject.core.CoreService" cardinality="1..1" policy="static" bind="bindCoreService" unbind="unbindCoreService"/>
+    </scr:component>
+</components>

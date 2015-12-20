@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="false" name="org.onosproject.driver.DefaultDrivers" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.driver.DefaultDrivers"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.net.driver.DefaultDriverProviderService"/>
+        </service>
+        <property name="service.pid" value="org.onosproject.driver.DefaultDrivers"/>
+        <reference name="driverAdminService" interface="org.onosproject.net.driver.DriverAdminService" cardinality="1..1" policy="static" bind="bindDriverAdminService" unbind="unbindDriverAdminService"/>
+    </scr:component>
+</components>

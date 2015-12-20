@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component enabled="true" immediate="true" name="org.onosproject.store.intent.impl.GossipIntentStore" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.store.intent.impl.GossipIntentStore"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.net.intent.IntentStore"/>
+            <provide interface="org.onosproject.store.Store"/>
+        </service>
+        <property name="service.pid" value="org.onosproject.store.intent.impl.GossipIntentStore"/>
+        <reference name="clusterService" interface="org.onosproject.cluster.ClusterService" cardinality="1..1" policy="static" bind="bindClusterService" unbind="unbindClusterService"/>
+        <reference name="storageService" interface="org.onosproject.store.service.StorageService" cardinality="1..1" policy="static" bind="bindStorageService" unbind="unbindStorageService"/>
+        <reference name="partitionService" interface="org.onosproject.net.intent.PartitionService" cardinality="1..1" policy="static" bind="bindPartitionService" unbind="unbindPartitionService"/>
+    </scr:component>
+</components>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.store.proxyarp.impl.DistributedProxyArpStore" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.store.proxyarp.impl.DistributedProxyArpStore"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.net.proxyarp.ProxyArpStore"/>
+        </service>
+        <property name="service.pid" value="org.onosproject.store.proxyarp.impl.DistributedProxyArpStore"/>
+        <reference name="mastershipService" interface="org.onosproject.mastership.MastershipService" cardinality="1..1" policy="static" bind="bindMastershipService" unbind="unbindMastershipService"/>
+        <reference name="clusterService" interface="org.onosproject.cluster.ClusterService" cardinality="1..1" policy="static" bind="bindClusterService" unbind="unbindClusterService"/>
+        <reference name="commService" interface="org.onosproject.store.cluster.messaging.ClusterCommunicationService" cardinality="1..1" policy="static" bind="bindCommService" unbind="unbindCommService"/>
+        <reference name="hostService" interface="org.onosproject.net.host.HostService" cardinality="1..1" policy="static" bind="bindHostService" unbind="unbindHostService"/>
+    </scr:component>
+</components>

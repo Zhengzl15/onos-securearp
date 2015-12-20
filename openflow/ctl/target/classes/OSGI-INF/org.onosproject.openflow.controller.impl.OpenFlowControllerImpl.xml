@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.openflow.controller.impl.OpenFlowControllerImpl" activate="activate" deactivate="deactivate" modified="modified">
+        <implementation class="org.onosproject.openflow.controller.impl.OpenFlowControllerImpl"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.openflow.controller.OpenFlowController"/>
+        </service>
+        <property name="openflowPort" type="Integer" value="6633"/>
+        <property name="workerThreads" type="Integer" value="16"/>
+        <property name="service.pid" value="org.onosproject.openflow.controller.impl.OpenFlowControllerImpl"/>
+        <reference name="driverService" interface="org.onosproject.net.driver.DriverService" cardinality="1..1" policy="static" bind="bindDriverService" unbind="unbindDriverService"/>
+        <reference name="defaultDriverProviderService" interface="org.onosproject.net.driver.DefaultDriverProviderService" cardinality="1..1" policy="static" bind="bindDefaultDriverProviderService" unbind="unbindDefaultDriverProviderService"/>
+        <reference name="cfgService" interface="org.onosproject.cfg.ComponentConfigService" cardinality="1..1" policy="static" bind="bindCfgService" unbind="unbindCfgService"/>
+    </scr:component>
+</components>

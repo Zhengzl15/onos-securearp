@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component immediate="true" name="org.onosproject.provider.pcep.topology.impl.PcepTopologyProvider" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.provider.pcep.topology.impl.PcepTopologyProvider"/>
+        <property name="service.pid" value="org.onosproject.provider.pcep.topology.impl.PcepTopologyProvider"/>
+        <reference name="linkProviderRegistry" interface="org.onosproject.net.link.LinkProviderRegistry" cardinality="1..1" policy="static" bind="bindLinkProviderRegistry" unbind="unbindLinkProviderRegistry"/>
+        <reference name="deviceProviderRegistry" interface="org.onosproject.net.device.DeviceProviderRegistry" cardinality="1..1" policy="static" bind="bindDeviceProviderRegistry" unbind="unbindDeviceProviderRegistry"/>
+        <reference name="controller" interface="org.onosproject.pcep.api.PcepController" cardinality="1..1" policy="static" bind="bindController" unbind="unbindController"/>
+        <reference name="deviceService" interface="org.onosproject.net.device.DeviceService" cardinality="1..1" policy="static" bind="bindDeviceService" unbind="unbindDeviceService"/>
+        <reference name="linkService" interface="org.onosproject.net.link.LinkService" cardinality="1..1" policy="static" bind="bindLinkService" unbind="unbindLinkService"/>
+        <reference name="mastershipAdminService" interface="org.onosproject.mastership.MastershipAdminService" cardinality="1..1" policy="static" bind="bindMastershipAdminService" unbind="unbindMastershipAdminService"/>
+        <reference name="mastershipService" interface="org.onosproject.mastership.MastershipService" cardinality="1..1" policy="static" bind="bindMastershipService" unbind="unbindMastershipService"/>
+        <reference name="clusterService" interface="org.onosproject.cluster.ClusterService" cardinality="1..1" policy="static" bind="bindClusterService" unbind="unbindClusterService"/>
+    </scr:component>
+</components>

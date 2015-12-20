@@ -1,0 +1,36 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1450617356114
+Build-Jdk: 1.8.0_65
+Built-By: zzl
+Bundle-Description: Serializers for ONOS classes
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: onos-core-serializers
+Bundle-SymbolicName: org.onosproject.onos-core-serializers
+Bundle-Version: 1.3.0
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.onosproject.store.serializers;uses:="com.esotericsof
+ tware.kryo,com.esotericsoftware.kryo.io,com.google.common.collect,org.o
+ nlab.packet,org.onlab.util,org.onosproject.cluster,org.onosproject.core
+ ,org.onosproject.mastership,org.onosproject.net,org.onosproject.net.pac
+ ket,org.onosproject.net.provider";version="1.3.0"
+Import-Package: com.esotericsoftware.kryo;version="[3.0,4)",com.esoteric
+ software.kryo.io;version="[3.0,4)",com.esotericsoftware.kryo.serializer
+ s;version="[3.0,4)",com.google.common.base;version="[18.0,19)",com.goog
+ le.common.collect;version="[18.0,19)",org.onlab.packet;version="[1.3,2)
+ ",org.onlab.util;version="[1.3,2)",org.onosproject.app;version="[1.3,2)
+ ",org.onosproject.cluster;version="[1.3,2)",org.onosproject.core;versio
+ n="[1.3,2)",org.onosproject.incubator.net.domain;version="[1.3,2)",org.
+ onosproject.mastership;version="[1.3,2)",org.onosproject.net;version="[
+ 1.3,2)",org.onosproject.net.device;version="[1.3,2)",org.onosproject.ne
+ t.flow;version="[1.3,2)",org.onosproject.net.flow.criteria;version="[1.
+ 3,2)",org.onosproject.net.flow.instructions;version="[1.3,2)",org.onosp
+ roject.net.host;version="[1.3,2)",org.onosproject.net.intent;version="[
+ 1.3,2)",org.onosproject.net.intent.constraint;version="[1.3,2)",org.ono
+ sproject.net.link;version="[1.3,2)",org.onosproject.net.meter;version="
+ [1.3,2)",org.onosproject.net.newresource;version="[1.3,2)",org.onosproj
+ ect.net.packet;version="[1.3,2)",org.onosproject.net.provider;version="
+ [1.3,2)",org.onosproject.net.resource.link;version="[1.3,2)",org.onospr
+ oject.store,org.onosproject.store.service;version="[1.3,2)"
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-2.4.0.201411031534

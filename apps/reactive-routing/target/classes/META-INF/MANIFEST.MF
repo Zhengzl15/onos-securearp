@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1450617388192
+Build-Jdk: 1.8.0_65
+Built-By: zzl
+Bundle-Description: SDN-IP reactive routing application
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: onos-app-reactive-routing
+Bundle-SymbolicName: org.onosproject.onos-app-reactive-routing
+Bundle-Version: 1.3.0
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.onosproject.reactive.routing;uses:="org.onosproject.
+ core,org.onosproject.net.packet,org.onosproject.routing,org.onosproject
+ .routing.config";version="1.3.0"
+Import-Package: org.onlab.packet;version="[1.3,2)",org.onosproject.core;
+ version="[1.3,2)",org.onosproject.net;version="[1.3,2)",org.onosproject
+ .net.flow;version="[1.3,2)",org.onosproject.net.packet;version="[1.3,2)
+ ",org.onosproject.routing;version="[1.3,2)",org.onosproject.routing.con
+ fig;version="[1.3,2)",org.slf4j;version="[1.7,2)"
+Require-Capability: osgi.service;effective:=active;filter:="(objectClass
+ =org.onosproject.net.packet.PacketService)",osgi.service;effective:=act
+ ive;filter:="(objectClass=org.onosproject.routing.RoutingService)",osgi
+ .service;effective:=active;filter:="(objectClass=org.onosproject.routin
+ g.config.RoutingConfigurationService)",osgi.service;effective:=active;f
+ ilter:="(objectClass=org.onosproject.core.CoreService)",osgi.ee;filter:
+ ="(&(osgi.ee=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/org.onosproject.reactive.routing.SdnIpReacti
+ veRouting.xml
+Tool: Bnd-2.4.0.201411031534

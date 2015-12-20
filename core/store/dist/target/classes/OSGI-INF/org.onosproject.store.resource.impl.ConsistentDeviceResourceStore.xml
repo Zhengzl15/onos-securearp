@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+    <scr:component enabled="true" immediate="true" name="org.onosproject.store.resource.impl.ConsistentDeviceResourceStore" activate="activate" deactivate="deactivate">
+        <implementation class="org.onosproject.store.resource.impl.ConsistentDeviceResourceStore"/>
+        <service servicefactory="false">
+            <provide interface="org.onosproject.net.resource.device.DeviceResourceStore"/>
+        </service>
+        <property name="service.pid" value="org.onosproject.store.resource.impl.ConsistentDeviceResourceStore"/>
+        <reference name="storageService" interface="org.onosproject.store.service.StorageService" cardinality="1..1" policy="static" bind="bindStorageService" unbind="unbindStorageService"/>
+        <reference name="deviceService" interface="org.onosproject.net.device.DeviceService" cardinality="1..1" policy="static" bind="bindDeviceService" unbind="unbindDeviceService"/>
+    </scr:component>
+</components>

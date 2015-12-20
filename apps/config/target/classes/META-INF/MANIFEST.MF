@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1450617386697
+Build-Jdk: 1.8.0_65
+Built-By: zzl
+Bundle-Description: Network configuration application
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: onos-app-config
+Bundle-SymbolicName: org.onosproject.onos-app-config
+Bundle-Version: 1.3.0
+Created-By: Apache Maven Bundle Plugin
+Export-Package: org.onosproject.config;uses:="com.fasterxml.jackson.anno
+ tation,org.onosproject.net.host";version="1.3.0"
+Import-Package: com.fasterxml.jackson.annotation;version="[2.4,3)",com.f
+ asterxml.jackson.databind;version="[2.4,3)",org.onlab.packet;version="[
+ 1.3,2)",org.onosproject.net;version="[1.3,2)",org.onosproject.net.host;
+ version="[1.3,2)",org.slf4j;version="[1.7,2)"
+Provide-Capability: osgi.service;effective:=active;objectClass="org.onos
+ project.config.NetworkConfigService"
+Require-Capability: osgi.service;effective:=active;filter:="(objectClass
+ =org.onosproject.net.host.HostAdminService)",osgi.ee;filter:="(&(osgi.e
+ e=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/org.onosproject.config.NetworkConfigReader.x
+ ml
+Tool: Bnd-2.4.0.201411031534
